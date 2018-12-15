@@ -1,0 +1,45 @@
+/* Position and sizing of burger button */
+.bm-burger-button { position: fixed; width: 36px; height: 30px; left: 36px; top: 36px; }
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars { background: #373a47; }
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button { height: 24px; width: 24px; }
+
+/* Color/shape of close button cross */
+.bm-cross { background: #9e18dd; }
+
+/* General sidebar styles */
+.bm-menu { background: #373a47; padding: 2.5em 1.5em 0; font-size: 1.5em; }
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape { fill: #373a47; }
+.bm-morph-shape svg { height: inherit; }
+
+/* Wrapper for item list */
+.bm-item-list { color: #b8b7ad; }
+
+/* Individual item */
+.bm-item { display: inline-block; color: #bdc3c7; }
+.bm-item:-webkit-any-link { text-decoration: none !important; }
+
+/* Styling of overlay */
+.bm-overlay { background: rgba(0, 0, 0, 0.3); }
+
+.bm-burger-bars { background: #9e18dd; }
+
+body { background-image: url("../images/pipes.png"); background-size: 100px 100px; }
+
+.All { min-height: 100vh; }
+
+.Front { margin-bottom: 1%; text-align: center; }
+.Front .front-logo { max-width: 25vw; }
+@media only screen and (max-width: 600px) { .Front .front-logo { max-width: 50vw; } }
+
+.CarouselContainer { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.Carousel { width: 80%; display: -webkit-box; display: -ms-flexbox; display: flex; max-height: 70vh; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+@media only screen and (max-width: 600px) { .Carousel { width: 100%; } }
+.Carousel .carouselHolder { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+.Carousel .carouselImage { max-height: 70vh; }
