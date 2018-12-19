@@ -42,4 +42,5 @@ body { background-image: url("../images/pipes.png"); background-size: 100px 100p
 .Carousel { width: 80%; display: -webkit-box; display: -ms-flexbox; display: flex; max-height: 70vh; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 @media only screen and (max-width: 600px) { .Carousel { width: 100%; } }
 .Carousel .carouselHolder { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
-.Carousel .carouselImage { max-height: 70vh; }
+.Carousel .carouselImage { max-width: 30vw; }
+@media only screen and (max-width: 600px) { .Carousel .carouselImage { width: 50vw; } }

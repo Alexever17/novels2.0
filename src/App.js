@@ -2,32 +2,42 @@ import React, { Component } from 'react';
 import './scss/App.css';
 import { elastic as Menu } from 'react-burger-menu'
 import logo from './images/logo.png'
-import Carousel from 'nuka-carousel';
+import BookList from './components/carousel';
 
 class App extends Component {
   showSettings(event) {
     event.preventDefault();
   }
   render() {
-    return (
-      <div className="All">
-
+    return <div className="All">
         <Menu width={250}>
-          <a id="home" className="menu-item" href="/">Top</a>
-          <span className="menu-item" href="">- - - - - - -</span>
-          <a id="chinese" className="menu-item" href="#chinese">Chinese Novels</a>
-          <a id="japanese" className="menu-item" href="#japanese">Japanese Novels</a>
-          <a id="korean" className="menu-item" href="#korean">Chinese Novels</a>
-          <a id="contact" className="menu-item" href="#contact">Contact</a>
+          <a id="home" className="menu-item" href="/">
+            Top
+          </a>
+          <span className="menu-item" href="">
+            - - - - - - -
+          </span>
+          <a id="chinese" className="menu-item" href="#chinese">
+            Chinese Novels
+          </a>
+          <a id="japanese" className="menu-item" href="#japanese">
+            Japanese Novels
+          </a>
+          <a id="korean" className="menu-item" href="#korean">
+            Chinese Novels
+          </a>
+          <a id="contact" className="menu-item" href="#contact">
+            Contact
+          </a>
         </Menu>
 
         <div className="Front">
-          <img className="front-logo" src={logo} />
+          <img className="front-logo" src={logo} alt="The main website logo"/>
         </div>
 
         <div className="CarouselContainer">
           <div className="Carousel">
-            <Carousel autoplay={true} autoplayInterval={4000}>
+            {/* <Carousel autoplay={true} autoplayInterval={4000}>
               <div className="carouselHolder">
                 <img className="carouselImage" src="http://placehold.it/400x300/000000/c0392b/" />
                 <div>
@@ -42,11 +52,12 @@ class App extends Component {
               <div className="carouselHolder">
                 <img className="carouselImage" src="http://placehold.it/400x300/000000/c0392b/" />
               </div>
-            </Carousel>
+            </Carousel> */}
+          <BookList sortID={"https://alexever17.herokuapp.com/api/novels/ranking/10"}>
+                  </BookList>
           </div>
         </div>
-      </div>
-    );
+      </div>;
   }
 }
 
