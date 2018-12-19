@@ -5,10 +5,15 @@ import logo from './images/logo.png'
 import BookList from './components/carousel';
 
 class App extends Component {
+  state = {
+    books: this.props.books
+  }
   showSettings(event) {
     event.preventDefault();
   }
   render() {
+    console.log(this.state.books);
+    
     return <div className="All">
         <Menu width={250}>
           <a id="home" className="menu-item" href="/">
