@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './uikit.css';
+import './scss/pure.css';
 import App from './App';
 import DocumentMeta from "react-document-meta";
 import axios from "axios";
 
 class Base extends React.Component {
-  state = {
-    books: undefined
+  constructor(props) {
+    super(props);
+    this.state = {
+      books: undefined
+    };
   }
 
   componentDidMount() {
@@ -22,7 +25,8 @@ class Base extends React.Component {
   render() {
     const meta = {
       title: "Alexever17's Novel Rankings",
-      description: "Gaze upon my favorite novels and maybe you will find something interesting for yourself!",
+      description:
+        "Gaze upon my favorite novels and maybe you will find something interesting for yourself!",
       canonical: "https://alex-novels.xyz/",
       meta: {
         charset: "utf-8",
@@ -32,11 +36,11 @@ class Base extends React.Component {
           "og:image": "https://alexever17.github.io/novels/images/library.jpg"
         }
       }
-    };           
+    };
 
     return (
       <DocumentMeta {...meta}>
-        <App books={this.state.books}/>
+        <App books={this.state.books} />
       </DocumentMeta>
     );
   }

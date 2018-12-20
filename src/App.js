@@ -1,35 +1,38 @@
 import React, { Component } from 'react';
 import './scss/App.css';
 import { elastic as Menu } from 'react-burger-menu'
-import logo from './images/logo.png'
-import BookList from './components/carousel';
+import NewNovelCarousel from './components/carousel-new-novels';
 
 class App extends Component {
-  state = {
-    books: this.props.books
+  constructor(props) {
+    super(props);
+    this.state = {
+      books: undefined
+    };
   }
+
+  componentDidUpdate() {
+    if (this.state.books) {
+      if (this.props.books !== this.state.books) {
+        this.setState({ books: this.props.books });
+      } 
+    } else {
+      this.setState({ books: this.props.books });
+    }
+  }
+
   showSettings(event) {
     event.preventDefault();
   }
+
   render() {
-    console.log(this.state.books);
-    
-    return <div className="All">
+    return <div className="All" id="top">
         <Menu width={250}>
-          <a id="home" className="menu-item" href="/">
+          <a id="home" className="menu-item" href="#top">
             Top
           </a>
-          <span className="menu-item" href="">
-            - - - - - - -
-          </span>
-          <a id="chinese" className="menu-item" href="#chinese">
-            Chinese Novels
-          </a>
-          <a id="japanese" className="menu-item" href="#japanese">
-            Japanese Novels
-          </a>
-          <a id="korean" className="menu-item" href="#korean">
-            Chinese Novels
+          <a id="chinese" className="menu-item" href="#lists">
+            Detailed Lists
           </a>
           <a id="contact" className="menu-item" href="#contact">
             Contact
@@ -37,29 +40,11 @@ class App extends Component {
         </Menu>
 
         <div className="Front">
-          <img className="front-logo" src={logo} alt="The main website logo"/>
         </div>
 
         <div className="CarouselContainer">
           <div className="Carousel">
-            {/* <Carousel autoplay={true} autoplayInterval={4000}>
-              <div className="carouselHolder">
-                <img className="carouselImage" src="http://placehold.it/400x300/000000/c0392b/" />
-                <div>
-                  <h1>TEEEEEEXT</h1>
-                  <h1>TEEEEEEXT</h1>
-                  <h1>TEEEEEEXT</h1>
-                </div>
-              </div>
-              <div className="carouselHolder">
-                <img className="carouselImage" src="http://placehold.it/400x300/000000/c0392b/" />
-              </div>
-              <div className="carouselHolder">
-                <img className="carouselImage" src="http://placehold.it/400x300/000000/c0392b/" />
-              </div>
-            </Carousel> */}
-          <BookList sortID={"https://alexever17.herokuapp.com/api/novels/ranking/10"}>
-                  </BookList>
+            <NewNovelCarousel books={this.state.books} />
           </div>
         </div>
       </div>;

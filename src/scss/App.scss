@@ -1,29 +1,33 @@
-@import 'Menu';
 @import 'mediaqueries';
 
 body {
   background-image: url("../images/pipes.png");
-  background-size: 100px 100px;
+  font-size: calc(0.6em + 1vw);
+  background-size: 6em 6em;
 }
+
+*:focus {outline:0;}
 
 .All {
   min-height: 100vh;
 }
 
-.Front {
-  margin-bottom: 1%;
-  text-align: center;
-  .front-logo {
-    max-width: 25vw;
-    @include break(600) {
-    max-width: 50vw;
-  }
-  }
-}
+@import 'Menu';
 
-.CarouselContainer {
-  display: flex;
-  justify-content: center;
+.Front {
+  margin-bottom: 1em;
+  text-align: center;
+  width: 100%;
+  height: 10em;
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  .front-logo {
+    display: block;
+    width: auto;
+    height: 100%;
+  }
 }
 
 @import 'carousel';
