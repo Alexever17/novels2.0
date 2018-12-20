@@ -1,20 +1,16 @@
+$height: 20em;
+
 .CarouselContainer {
   display: flex;
   justify-content: center;
-  width:100%;
-  height: 60vh;
-  max-height: 60vh;
-  min-width: 400px;
-  min-height: 400px;
+  width: 100%;
+  height: $height;
 }
 
 .Carousel {
-  width: 55%;
+  width: 35em;
   display: flex;
   height: 100%;
-  @include break(800) {
-    width: 100%;
-  }
   justify-content: center;
   background: #ffffff;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -27,44 +23,48 @@
     height: 100%;
   }
   .carouselImageHolder {
+    display: block;
     height: 100%;
-    display: flex;
-    justify-content: start;
-    margin-right: 0.5em;
   }
   .carouselTextHolder {
     overflow: auto !important;
     box-sizing: border-box;
-    max-width: 50%;
-    height: 60vh;
+    height: 100%;
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: start;
     align-content: center;
     text-align: center;
-    margin-left: 0.5em;
-    padding: 1em;
+    padding: 0 2em 0 2em;
   }
   .carouselImage {
-    min-height: 400px;
-    height: 60vh;
+    height: 100%;
     width: auto;
   }
+  
 }
+
+.slider-frame {
+    height: $height !important;
+  }
+
+  .slider-slide {
+    height: $height !important;
+  }
 
 .slider-control-bottomcenter{
   bottom: inherit !important;
 }
 
 .slider-control-centerleft{
-  left: -56px !important;
+  left: -3.3em !important;
   @include break(800) {
     visibility: hidden;
   }
 }
 
 .slider-control-centerright{
-  right: -56px !important;
+  right: -3.3em !important;
   @include break(800) {
     visibility: hidden;
   }

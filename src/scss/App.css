@@ -39,22 +39,25 @@ body { background-image: url("../images/pipes.png"); font-size: calc(0.6em + 1vw
 
 .bm-burger-bars { background: #9e18dd; }
 
-.Front { margin-bottom: 1em; text-align: center; width: 100%; height: 10em; background-image: url("../images/logo.png"); background-repeat: no-repeat; background-size: contain; background-position: center; }
+.Front { margin-bottom: 1em; text-align: center; width: 100%; height: 8em; background-image: url("../images/logo.png"); background-repeat: no-repeat; background-size: contain; background-position: center; }
 .Front .front-logo { display: block; width: auto; height: 100%; }
 
-.CarouselContainer { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 100%; height: 60vh; max-height: 60vh; min-width: 400px; min-height: 400px; }
+.CarouselContainer { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 100%; height: 20em; }
 
-.Carousel { width: 55%; display: -webkit-box; display: -ms-flexbox; display: flex; height: 100%; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; background: #ffffff; -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
-@media only screen and (max-width: 800px) { .Carousel { width: 100%; } }
+.Carousel { width: 35em; display: -webkit-box; display: -ms-flexbox; display: flex; height: 100%; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; background: #ffffff; -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 .Carousel .carouselHolder { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: center; align-content: center; width: 100%; height: 100%; }
-.Carousel .carouselImageHolder { height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: start; margin-right: 0.5em; }
-.Carousel .carouselTextHolder { overflow: auto !important; -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 50%; height: 60vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: center; align-content: center; text-align: center; margin-left: 0.5em; padding: 1em; }
-.Carousel .carouselImage { min-height: 400px; height: 60vh; width: auto; }
+.Carousel .carouselImageHolder { display: block; height: 100%; }
+.Carousel .carouselTextHolder { overflow: auto !important; -webkit-box-sizing: border-box; box-sizing: border-box; height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: start; -ms-flex-line-pack: center; align-content: center; text-align: center; padding: 0 2em 0 2em; }
+.Carousel .carouselImage { height: 100%; width: auto; }
+
+.slider-frame { height: 20em !important; }
+
+.slider-slide { height: 20em !important; }
 
 .slider-control-bottomcenter { bottom: inherit !important; }
 
-.slider-control-centerleft { left: -56px !important; }
+.slider-control-centerleft { left: -3.3em !important; }
 @media only screen and (max-width: 800px) { .slider-control-centerleft { visibility: hidden; } }
 
-.slider-control-centerright { right: -56px !important; }
+.slider-control-centerright { right: -3.3em !important; }
 @media only screen and (max-width: 800px) { .slider-control-centerright { visibility: hidden; } }
