@@ -9,19 +9,21 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: #9e18dd;
 }
 
-/* Position and sizing of clickable cross button */
+/* Sizing of clickable cross button */
 .bm-cross-button {
   height: 2em !important;
   width: 2em !important;
 }
 
+/* Position of clickable cross button */
 .bm-menu-wrap > div:nth-child(3) > div > span {
     top: 0.85em !important;
     right: 1.7em !important;
 }
+
 /* Color/shape of close button cross */
 .bm-cross {
   background: #9e18dd;
@@ -67,11 +69,3 @@
   }
 }
 
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.bm-burger-bars {
-  background: #9e18dd;
-}

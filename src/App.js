@@ -3,6 +3,7 @@ import './scss/App.css';
 import { elastic as Menu } from 'react-burger-menu'
 import NewNovelCarousel from './components/carousel-new-novels';
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -26,6 +27,8 @@ class App extends Component {
   }
 
   render() {
+    
+
     return <div className="All" id="top">
         <Menu width={250}>
           <a id="home" className="menu-item" href="#top">
@@ -39,14 +42,17 @@ class App extends Component {
           </a>
         </Menu>
 
-        <div className="Front">
-        </div>
+        <div className="Front" />
 
-        <div className="CarouselContainer">
+        <NewNovelCarousel books={this.state.books} />
+
+      
+
+        {/* <div className="CarouselContainer">
           <div className="Carousel">
             <NewNovelCarousel books={this.state.books} />
           </div>
-        </div>
+        </div> */}
       </div>;
   }
 }

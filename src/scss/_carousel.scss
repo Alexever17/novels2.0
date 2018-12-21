@@ -1,4 +1,5 @@
 $height: 20em;
+$heightMobile: 30em;
 
 .CarouselContainer {
   display: flex;
@@ -23,13 +24,16 @@ $height: 20em;
     height: 100%;
   }
   .carouselImageHolder {
-    display: block;
+    display: flex;
+    justify-content: center;
     height: 100%;
   }
+
   .carouselTextHolder {
     overflow: auto !important;
     box-sizing: border-box;
     height: 100%;
+    width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: start;
@@ -37,11 +41,11 @@ $height: 20em;
     text-align: center;
     padding: 0 2em 0 2em;
   }
+
   .carouselImage {
     height: 100%;
     width: auto;
   }
-  
 }
 
 .slider-frame {
@@ -67,5 +71,71 @@ $height: 20em;
   right: -3.3em !important;
   @include break(800) {
     visibility: hidden;
+  }
+}
+
+@include break(600) {
+  .Carousel {
+    background: rgba(255, 255, 255, 0.75);
+    width: 100%;
+    box-shadow: none;
+  }
+  
+  .CarouselContainer {
+    height: $heightMobile;
+  }
+
+  .carouselHolder {
+    // flex-direction: column;
+    display: initial !important;
+  }
+
+  .carouselImageHolder {
+    position: relative;
+    height: 100% !important;
+  }
+
+  .carouselImage {
+    height: 100%;
+    width: auto;
+  }
+
+  .carouselTextHolder {
+    color: #ffffff;
+    padding: 0 4em 0 4em !important;
+    &>*{
+      background: rgba(0, 0, 0, 0.75);
+    }
+    position: absolute;
+    bottom: 0;    
+    justify-content: flex-end !important;
+    height: 27% !important;
+    a {
+      color: white;
+      display: block;
+      margin: 3px;
+    }
+  }
+
+  .carouselTextAddition {
+    margin: 0;
+    padding: 3px;
+  }
+
+  .carouselTextTitle {
+    margin: 0;
+    padding: 3px;
+  }
+
+  .carouselTextDescription {
+    display: none;
+  }
+
+  .slider-frame {
+    height: $heightMobile !important;
+  }
+
+  .slider-slide {
+    height: $heightMobile !important;
   }
 }
