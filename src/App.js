@@ -12,11 +12,24 @@ class App extends Component {
     };
   }
 
+  showMenu = function () {
+    let button = document.getElementsByClassName("bm-burger-button")[0];
+    if (window.scrollY >= 90) {
+      button.className = "bm-burger-button show";
+    } else {
+      button.className = "bm-burger-button hide";
+    }
+  };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.showMenu);
+  }
+
   componentDidUpdate() {
     if (this.state.books) {
       if (this.props.books !== this.state.books) {
         this.setState({ books: this.props.books });
-      } 
+      }
     } else {
       this.setState({ books: this.props.books });
     }
@@ -27,8 +40,6 @@ class App extends Component {
   }
 
   render() {
-    
-
     return <div className="All" id="top">
         <Menu width={250}>
           <a id="home" className="menu-item" href="#top">
@@ -44,9 +55,10 @@ class App extends Component {
 
         <div className="Front" />
 
-        <NewNovelCarousel books={this.state.books} />
-
-      
+        <div className="carouselContainer">
+          <NewNovelCarousel books={this.state.books} />
+        </div>
+        
 
         {/* <div className="CarouselContainer">
           <div className="Carousel">

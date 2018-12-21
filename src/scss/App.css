@@ -7,8 +7,17 @@ body { background-image: url("../images/pipes.png"); font-size: calc(0.6em + 1vw
 
 .All { min-height: 100vh; }
 
+.show { display: block; -webkit-animation-name: showMenu; animation-name: showMenu; -webkit-animation-duration: 0.5s; animation-duration: 0.5s; }
+
+@-webkit-keyframes showMenu { from { opacity: 0; }
+  to { opacity: 1; } }
+
+@keyframes showMenu { from { opacity: 0; }
+  to { opacity: 1; } }
+.hide { display: none; }
+
 /* Position and sizing of burger button */
-.bm-burger-button { position: fixed; width: 2.5em; height: 2em; left: 1.7em; top: 1.3em; }
+.bm-burger-button { position: fixed; width: 2.5em; height: 2em; left: 1.5em; top: 1.5em; }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars { background: #9e18dd; }
@@ -41,36 +50,18 @@ body { background-image: url("../images/pipes.png"); font-size: calc(0.6em + 1vw
 .Front { margin-bottom: 1em; text-align: center; width: 100%; height: 8em; background-image: url("../images/logo.png"); background-repeat: no-repeat; background-size: contain; background-position: center; }
 .Front .front-logo { display: block; width: auto; height: 100%; }
 
-.CarouselContainer { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 100%; height: 20em; }
+.carouselContainer { width: 85%; padding-left: 7.5%; }
 
-.Carousel { width: 35em; display: -webkit-box; display: -ms-flexbox; display: flex; height: 100%; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; background: #ffffff; -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
-.Carousel .carouselHolder { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: center; align-content: center; width: 100%; height: 100%; }
-.Carousel .carouselImageHolder { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: 100%; }
-.Carousel .carouselTextHolder { overflow: auto !important; -webkit-box-sizing: border-box; box-sizing: border-box; height: 100%; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: start; -ms-flex-line-pack: center; align-content: center; text-align: center; padding: 0 2em 0 2em; }
-.Carousel .carouselImage { height: 100%; width: auto; }
+.slick-arrow { display: none !important; }
 
-.slider-frame { height: 20em !important; }
+.carouselHolder { text-decoration: none; background: rgba(111, 0, 175, 0.096); color: black; }
 
-.slider-slide { height: 20em !important; }
+.carouselImageHolder { height: 55vh; background-repeat: no-repeat; background-size: cover; background-position: center; }
 
-.slider-control-bottomcenter { bottom: inherit !important; }
+.carouselTextHolder { text-align: center; }
 
-.slider-control-centerleft { left: -3.3em !important; }
-@media only screen and (max-width: 800px) { .slider-control-centerleft { visibility: hidden; } }
+.carouselTextAddition { margin: 0.4em; color: #9e18dd; }
 
-.slider-control-centerright { right: -3.3em !important; }
-@media only screen and (max-width: 800px) { .slider-control-centerright { visibility: hidden; } }
+.carouselTextTitle { margin: 0.7em; }
 
-@media only screen and (max-width: 600px) { .Carousel { background: rgba(255, 255, 255, 0.75); width: 100%; -webkit-box-shadow: none; box-shadow: none; }
-  .CarouselContainer { height: 30em; }
-  .carouselHolder { display: initial !important; }
-  .carouselImageHolder { position: relative; height: 100% !important; }
-  .carouselImage { height: 100%; width: auto; }
-  .carouselTextHolder { color: #ffffff; padding: 0 4em 0 4em !important; position: absolute; bottom: 0; -webkit-box-pack: end !important; -ms-flex-pack: end !important; justify-content: flex-end !important; height: 27% !important; }
-  .carouselTextHolder > * { background: rgba(0, 0, 0, 0.75); }
-  .carouselTextHolder a { color: white; display: block; margin: 3px; }
-  .carouselTextAddition { margin: 0; padding: 3px; }
-  .carouselTextTitle { margin: 0; padding: 3px; }
-  .carouselTextDescription { display: none; }
-  .slider-frame { height: 30em !important; }
-  .slider-slide { height: 30em !important; } }
+.carouselTextDescription { display: none; }

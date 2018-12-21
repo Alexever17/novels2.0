@@ -1,10 +1,27 @@
+// shows the menu button after some scrolling and triggeres an animation
+.show {
+  display: block;
+  animation-name: showMenu;
+  animation-duration: 0.5s;
+}
+
+@keyframes showMenu {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+//hides menu button on top of the page
+.hide {
+  display: none;
+}
+
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
   width: 2.5em;
   height: 2em;
-  left: 1.7em;
-  top: 1.3em;
+  left: 1.5em;
+  top: 1.5em;
 }
 
 /* Color/shape of burger icon bars */

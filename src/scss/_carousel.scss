@@ -1,141 +1,43 @@
-$height: 20em;
-$heightMobile: 30em;
-
-.CarouselContainer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: $height;
+.carouselContainer {
+  width: 85%;
+  padding-left: 7.5%;
 }
 
-.Carousel {
-  width: 35em;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  background: #ffffff;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-
-  .carouselHolder {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    width:100%;
-    height: 100%;
-  }
-  .carouselImageHolder {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-  }
-
-  .carouselTextHolder {
-    overflow: auto !important;
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: start;
-    align-content: center;
-    text-align: center;
-    padding: 0 2em 0 2em;
-  }
-
-  .carouselImage {
-    height: 100%;
-    width: auto;
-  }
+.slick-arrow {
+  display: none !important;
 }
 
-.slider-frame {
-    height: $height !important;
-  }
-
-  .slider-slide {
-    height: $height !important;
-  }
-
-.slider-control-bottomcenter{
-  bottom: inherit !important;
+//the whole slide of the container
+.carouselHolder {
+  text-decoration: none;
+  background: rgba(111, 0, 175, 0.096);
+  color: black;
 }
 
-.slider-control-centerleft{
-  left: -3.3em !important;
-  @include break(800) {
-    visibility: hidden;
-  }
+.carouselImageHolder {
+  height: 55vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center
 }
 
-.slider-control-centerright{
-  right: -3.3em !important;
-  @include break(800) {
-    visibility: hidden;
-  }
+//box for all the text
+.carouselTextHolder {
+  text-align: center;
 }
 
-@include break(600) {
-  .Carousel {
-    background: rgba(255, 255, 255, 0.75);
-    width: 100%;
-    box-shadow: none;
-  }
-  
-  .CarouselContainer {
-    height: $heightMobile;
-  }
+//the small h element which says, new addition
+.carouselTextAddition {
+  margin: 0.4em;
+  color: #9e18dd;
+}
 
-  .carouselHolder {
-    // flex-direction: column;
-    display: initial !important;
-  }
+//title of the book
+.carouselTextTitle {
+  margin: 0.7em;
+}
 
-  .carouselImageHolder {
-    position: relative;
-    height: 100% !important;
-  }
-
-  .carouselImage {
-    height: 100%;
-    width: auto;
-  }
-
-  .carouselTextHolder {
-    color: #ffffff;
-    padding: 0 4em 0 4em !important;
-    &>*{
-      background: rgba(0, 0, 0, 0.75);
-    }
-    position: absolute;
-    bottom: 0;    
-    justify-content: flex-end !important;
-    height: 27% !important;
-    a {
-      color: white;
-      display: block;
-      margin: 3px;
-    }
-  }
-
-  .carouselTextAddition {
-    margin: 0;
-    padding: 3px;
-  }
-
-  .carouselTextTitle {
-    margin: 0;
-    padding: 3px;
-  }
-
-  .carouselTextDescription {
-    display: none;
-  }
-
-  .slider-frame {
-    height: $heightMobile !important;
-  }
-
-  .slider-slide {
-    height: $heightMobile !important;
-  }
+//description of the book
+.carouselTextDescription {
+  display: none;
 }
