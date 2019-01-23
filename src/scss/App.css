@@ -60,6 +60,10 @@ body { background-image: url("../images/pipes.png"); font-size: calc(0.6em + 1vw
 
 .carouselTextHolder { text-align: center; }
 
+.carouselFirstRow { margin-top: 1%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.carouselModule { font-weight: bold; background: #9e18dd; color: white; margin-left: 1%; padding: 0 2%; }
+
 .carouselTextAddition { margin: 0.4em; color: #9e18dd; }
 
 .carouselTextTitle { margin: 0.7em; }

@@ -26,6 +26,23 @@
   text-align: center;
 }
 
+//the first row with the text "new addition" and the info button
+.carouselFirstRow {
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+//the info button
+.carouselModule {
+  font-weight: bold;
+  background: #9e18dd;
+  color: white;
+  margin-left: 1%;
+  padding: 0 2%;
+}
+
+
 //the small h element which says, new addition
 .carouselTextAddition {
   margin: 0.4em;

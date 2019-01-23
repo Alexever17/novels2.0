@@ -29,7 +29,10 @@ export default class NewNovelCarousel extends React.Component {
           <div className="carouselImageHolder" style={{ "backgroundImage": `url(${book.picSource})`}}>
           </div>
             <div className="carouselTextHolder">
-              <h3 className="carouselTextAddition">New Addition!</h3>
+              <div className="carouselFirstRow">
+                <h3 className="carouselTextAddition">New Addition!</h3>
+                <button className="carouselModule">Info</button>
+              </div>
               <h2 className="carouselTextTitle">
                 {JSON.stringify(book.name)}
               </h2>
@@ -40,7 +43,7 @@ export default class NewNovelCarousel extends React.Component {
           </a>;
       }, this);
 
-      let carouselSettings = { arrow: false, dots: true, lazyLoad: true, infinite: true, speed: 500, slidesToShow: 1, slidesToScroll: 1, initialSlide: 0, adaptiveHeight: true, autoplay: true };
+      let carouselSettings = { arrow: false, dots: true, lazyLoad: true, infinite: true, speed: 500, slidesToShow: 1, slidesToScroll: 1, initialSlide: 0, adaptiveHeight: true, autoplay: false };
       return <Slider {...carouselSettings}>{books}</Slider>;
 
     } else {
