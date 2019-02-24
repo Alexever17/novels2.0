@@ -33,7 +33,7 @@ export default class NewNovelCarousel extends React.Component {
             <div className="carouselTextHolder">
               <div className="carouselFirstRow">
                 <h3 className="carouselTextAddition">New Addition!</h3>
-                <button className="carouselModule">Info</button>
+                <button className="carouselModule" onClick={(e) => this.props.toggleModal(e, book)} >Info</button>
               </div>
               <h2 className="carouselTextTitle">
                 {JSON.stringify(book.name)}
