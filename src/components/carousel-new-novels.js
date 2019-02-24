@@ -21,8 +21,10 @@ export default class NewNovelCarousel extends React.Component {
   render() {
     if (this.state.books) {
 
+      //searches for the newest additions to the database
       let books = latestNovelAdditionsFirst(this.state.books).slice(0, 7);
 
+      //makes the insides of the carousel
       books.forEach(function(book, index, books){
         books[index] = 
         <a key={index.toString()} href={JSON.stringify(book.url)} className="carouselHolder">
@@ -44,6 +46,7 @@ export default class NewNovelCarousel extends React.Component {
       }, this);
 
       let carouselSettings = { arrow: false, dots: true, lazyLoad: true, infinite: true, speed: 500, slidesToShow: 1, slidesToScroll: 1, initialSlide: 0, adaptiveHeight: true, autoplay: false };
+      //returns the carousel with the insides
       return <Slider {...carouselSettings}>{books}</Slider>;
 
     } else {

@@ -1,3 +1,4 @@
+//sorts for the newest additions to the database
 export function latestNovelAdditionsFirst(books) { 
   let newOrder = books.sort(function (a, b) {
     var datePartsA = a.dataAdded.split(".");
