@@ -5,9 +5,11 @@ import Slider from "react-slick";
 export default class NewNovelCarousel extends React.Component {
   constructor(props) {
     super(props);
+    //books stores the whole database, book is for an individual book
     this.state = { books: undefined, book: undefined };
   }
 
+  //accounts for the database to update while browsing and enforcing the data being there
   componentDidUpdate() {
     if (this.state.books) {
       if (this.props.books !== this.state.books) {
@@ -33,6 +35,10 @@ export default class NewNovelCarousel extends React.Component {
             <div className="carouselTextHolder">
               <div className="carouselFirstRow">
                 <h3 className="carouselTextAddition">New Addition!</h3>
+                {/* 
+                gives each of the slider buttons the right modals to trigger, with the info from each book
+                on the other side the book sets the state in the modal. 
+                */}
                 <button className="carouselModule" onClick={(e) => this.props.toggleModal(e, book)} >Info</button>
               </div>
               <h2 className="carouselTextTitle">

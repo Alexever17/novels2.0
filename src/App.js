@@ -8,14 +8,18 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      //storing the whole book database
       books: undefined,
       showModal: false,
+      //gets loaded into when a modal is opened
       modalContent: null,
     };
 
+    //the bind is necessary so that it doesn't try to search in the window scope
     this.toggleModal = this.toggleModal.bind(this);
   }
 
+  //the menu is hiden before you scroll a fixed amount, just to make a clean appareance with the picture
   showMenu = function () {
     let button = document.getElementsByClassName("bm-burger-button")[0];
     if (window.scrollY >= 100) {
@@ -25,6 +29,8 @@ class App extends Component {
     }
   };
 
+  //the modal remains empty before activation, then the setState updates the component with the information
+  //its gets triggered by onclicks from other components
   toggleModal(e, content) {
     e.preventDefault();
 
@@ -46,6 +52,7 @@ class App extends Component {
     window.addEventListener('scroll', this.showMenu);
   }
 
+  //accounts for the database to update while browsing and enforcing the data being there
   componentDidUpdate() {
     if (this.state.books) {
       if (this.props.books !== this.state.books) {
@@ -56,15 +63,11 @@ class App extends Component {
     }
   }
 
-  showSettings(event) {
-    event.preventDefault();
-  }
-
   render() {
     const { showModal, modalContent } = this.state;
 
     return (
-      <div >
+      <div className="All" id="top">
         <Menu width={250}>
             <a id="home" className="menu-item" href="#top">
               Top

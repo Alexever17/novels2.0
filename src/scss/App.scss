@@ -4,12 +4,6 @@
 @import '../components/slick/slick/slick.css';
 @import "../components/slick/slick/slick-theme.css";
 
-html {
-  @include break(600) {
-    overflow-x: hidden;
-  }
-}
-
 body {
   background-image: url("../images/pipes.png");
   font-size: calc(0.6em + 1vw);
@@ -17,8 +11,10 @@ body {
   font-family: 'Quicksand', cursive;
 }
 
+//all buttons won't be blue in chrome
 *:focus {outline:0;}
 
+//contains all elements of the app #TODO delete when enough elements on the page
 .All {
   min-height: 100vh;
 }
@@ -26,6 +22,7 @@ body {
 @import 'Menu';
 @import './shared/modal';
 
+//The div element with the picture inside
 .Front {
   margin-bottom: 1em;
   text-align: center;
