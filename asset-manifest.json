@@ -1,15 +1,14 @@
 {
-  "main.css": "/novels2.0/static/css/main.59e5c70c.chunk.css",
-  "main.js": "/novels2.0/static/js/main.ff30448f.chunk.js",
-  "main.js.map": "/novels2.0/static/js/main.ff30448f.chunk.js.map",
-  "static/js/1.22f25bb4.chunk.js": "/novels2.0/static/js/1.22f25bb4.chunk.js",
-  "static/js/1.22f25bb4.chunk.js.map": "/novels2.0/static/js/1.22f25bb4.chunk.js.map",
+  "main.css": "/novels2.0/static/css/main.4854cbd3.chunk.css",
+  "main.js": "/novels2.0/static/js/main.8b1655fc.chunk.js",
+  "main.js.map": "/novels2.0/static/js/main.8b1655fc.chunk.js.map",
+  "static/js/1.cafae86a.chunk.js": "/novels2.0/static/js/1.cafae86a.chunk.js",
+  "static/js/1.cafae86a.chunk.js.map": "/novels2.0/static/js/1.cafae86a.chunk.js.map",
   "runtime~main.js": "/novels2.0/static/js/runtime~main.c77cb7f3.js",
   "runtime~main.js.map": "/novels2.0/static/js/runtime~main.c77cb7f3.js.map",
-  "static/media/App.css": "/novels2.0/static/media/logo.d26e642a.png",
-  "static/media/slick-theme.css": "/novels2.0/static/media/slick.f97e3bbf.svg",
-  "static/css/main.59e5c70c.chunk.css.map": "/novels2.0/static/css/main.59e5c70c.chunk.css.map",
+  "static/media/App.scss": "/novels2.0/static/media/logo.d26e642a.png",
+  "static/css/main.4854cbd3.chunk.css.map": "/novels2.0/static/css/main.4854cbd3.chunk.css.map",
   "index.html": "/novels2.0/index.html",
-  "precache-manifest.63515b1814cd4a842f341df965d66906.js": "/novels2.0/precache-manifest.63515b1814cd4a842f341df965d66906.js",
+  "precache-manifest.e2fd6ad184f439253671f74cb51f2499.js": "/novels2.0/precache-manifest.e2fd6ad184f439253671f74cb51f2499.js",
   "service-worker.js": "/novels2.0/service-worker.js"
 }
