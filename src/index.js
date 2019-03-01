@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './scss/pure.css';
-import App from './App';
+import { Helmet } from "react-helmet";
 import axios from "axios";
-import {Helmet} from "react-helmet";
-import "./components/slick/slick/slick.css";
-import "./components/slick/slick/slick-theme.css";
+import App from './App';
+import './scss/App.scss';
 
 class Base extends React.Component {
   constructor(props) {

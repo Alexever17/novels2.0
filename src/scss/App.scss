@@ -1,5 +1,8 @@
 @import 'mediaqueries';
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import 'pure.css';
+@import '../components/slick/slick/slick.css';
+@import "../components/slick/slick/slick-theme.css";
 
 html {
   @include break(600) {

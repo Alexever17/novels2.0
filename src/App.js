@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './scss/App.scss';
 import { elastic as Menu } from 'react-burger-menu'
 import NewNovelCarousel from './components/carousel-new-novels';
 import Modal from './components/shared/modal';
