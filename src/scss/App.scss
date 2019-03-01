@@ -1,11 +1,8 @@
 @import 'mediaqueries';
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
-
-html {
-  @include break(600) {
-    overflow-x: hidden;
-  }
-}
+@import 'pure.css';
+@import '../components/slick/slick/slick.css';
+@import "../components/slick/slick/slick-theme.css";
 
 body {
   background-image: url("../images/pipes.png");
@@ -14,14 +11,18 @@ body {
   font-family: 'Quicksand', cursive;
 }
 
+//all buttons won't be blue in chrome
 *:focus {outline:0;}
 
+//contains all elements of the app #TODO delete when enough elements on the page
 .All {
   min-height: 100vh;
 }
 
 @import 'Menu';
+@import './shared/modal';
 
+//The div element with the picture inside
 .Front {
   margin-bottom: 1em;
   text-align: center;
