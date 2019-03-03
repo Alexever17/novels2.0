@@ -9,9 +9,11 @@
 
 //the whole slide of the container
 .carouselHolder {
+  width: calc(100% - 2px) !important;
   text-decoration: none;
-  background: rgba(111, 0, 175, 0.096);
+  background: rgb(255, 245, 254);
   color: black;
+  border: 1px solid rgb(189, 189, 189);
 }
 
 .carouselImageHolder {
@@ -26,20 +28,12 @@
   text-align: center;
 }
 
-//the first row with the text "new addition" and the info button
-.carouselFirstRow {
-  margin-top: 1%;
+//the second row with the text "new addition" and the info button
+.carouselButtonRow {
+  margin-bottom: 1em;
   display: flex;
   justify-content: center;
-}
-
-//the info button
-.carouselModule {
-  font-weight: bold;
-  background: #9e18dd;
-  color: white;
-  margin-left: 1%;
-  padding: 0 2%;
+  align-items: center;
 }
 
 
@@ -51,7 +45,7 @@
 
 //title of the book
 .carouselTextTitle {
-  margin: 0.7em;
+  margin: 0.5em;
 }
 
 //description of the book

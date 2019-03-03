@@ -1,8 +1,9 @@
-@import 'mediaqueries';
+@import './supporting/mediaqueries.scss';
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
-@import 'pure.css';
-@import '../components/slick/slick/slick.css';
-@import "../components/slick/slick/slick-theme.css";
+@import './supporting/pure.css';
+@import '../components/supporting/slick/slick/slick.css';
+@import '../components/supporting/slick/slick/slick-theme.css';
+@import './shared/button.scss';
 
 body {
   background-image: url("../images/pipes.png");
@@ -19,7 +20,7 @@ body {
   min-height: 100vh;
 }
 
-@import 'Menu';
+@import './general/Menu.scss';
 @import './shared/modal';
 
 //The div element with the picture inside
@@ -39,4 +40,4 @@ body {
   }
 }
 
-@import 'carousel';
+@import './general/carousel.scss';

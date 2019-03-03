@@ -1,6 +1,7 @@
 import React from "react";
-import { latestNovelAdditionsFirst } from "../components/helperFunctions";
+import { latestNovelAdditionsFirst } from "./supporting/helperFunctions";
 import Slider from "react-slick";
+import Button from "./shared/button";
 
 export default class NewNovelCarousel extends React.Component {
   constructor(props) {
@@ -29,21 +30,26 @@ export default class NewNovelCarousel extends React.Component {
       //makes the insides of the carousel
       books.forEach(function(book, index, books){
         books[index] = 
-        <a key={index.toString()} href={JSON.stringify(book.url)} className="carouselHolder">
+        <a key={index.toString()} className="carouselHolder">
           <div className="carouselImageHolder" style={{ "backgroundImage": `url(${book.picSource})`}}>
           </div>
             <div className="carouselTextHolder">
-              <div className="carouselFirstRow">
+              <h2 className="carouselTextTitle">
+                {JSON.stringify(book.name)}
+              </h2>
+              <div className="carouselButtonRow">
                 <h3 className="carouselTextAddition">New Addition!</h3>
                 {/* 
                 gives each of the slider buttons the right modals to trigger, with the info from each book
                 on the other side the book sets the state in the modal. 
                 */}
-                <button className="carouselModule" onClick={(e) => this.props.toggleModal(e, book)} >Info</button>
+                <Button
+                  classname={"carouselModuleButton"}
+                  text={"Info"}
+                  onclick={(e) => this.props.toggleModal(e, book)}
+                />
               </div>
-              <h2 className="carouselTextTitle">
-                {JSON.stringify(book.name)}
-              </h2>
+              
               <h6 className="carouselTextDescription">
                 {JSON.stringify(book.description).slice(0, 300) + "..."}
               </h6>

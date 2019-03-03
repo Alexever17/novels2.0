@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from "./button";
 
 //this gets updates once setState is triggered in app.js
 const Modal = ({ showModal, modalContent, toggleModal }) => {
@@ -9,7 +10,11 @@ const Modal = ({ showModal, modalContent, toggleModal }) => {
             <div className="modal__outer" onClick={(e) => toggleModal(e)} ></div>
             <div className="modal__inner">
             {/* and also by clicking the closing button duh */}
-                <button className="modal__inner__button modal__inner__button--close" onClick={(e) => toggleModal(e)}>X Close</button>
+                <Button
+                    classname={"modal__inner__button modal__inner__button--close red"}
+                    text={"Close"}
+                    onclick={(e) => toggleModal(e)}
+                />
                 {
                     modalContent.name ? (
                         <h1 className="modal__inner__headline">
@@ -33,7 +38,12 @@ const Modal = ({ showModal, modalContent, toggleModal }) => {
                 }
                 {
                     modalContent.url ? (
-                        <a href={modalContent.url} target="_blank" rel="noopener noreferrer" className="modal__inner__button modal__inner__button--external">Further Info</a>
+                        <a href={modalContent.url} target="_blank" rel="noopener noreferrer" style={{textDecoration:"none"}}>
+                            <Button
+                                classname={"modal__inner__button modal__inner__button--external"}
+                                text={"Further Info"}
+                            />
+                        </a>
                     ) : null
                 }
                 {

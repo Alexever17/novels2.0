@@ -38,20 +38,12 @@
             cursor: pointer;
 
             &--close {
-                background: #f0506e;
-                padding: 4% 8%;
-                margin-left: 67%;
-                color: #fff;
-                text-align: left;
+                margin-left: 70%;
                 z-index: 1000;
             }
 
             &--external {
                 display: inline;
-                background: #b46cff;
-                color: #fff;
-                text-decoration: none;
-                padding: 4% 5%;
             }
         }
 
@@ -77,13 +69,11 @@
         &__ranking {
             font-size: 140%;
             color: #333;
-            margin-bottom: 10%;
+            margin-bottom: 7%;
         }
 
         &__description {
             text-align: left;
-            padding-top: 4%;
-
             h3 {
                 font-weight: 800;
                 font-size: 150%;

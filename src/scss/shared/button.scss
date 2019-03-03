@@ -1,0 +1,29 @@
+button {
+    color: #fff !important;
+    border: none;
+    background-color: #9e18dd;
+    position: relative;
+    overflow: hidden;
+    padding: 2.2% 5%;
+}
+
+.red {
+    background-color: #e74040;
+}
+
+button .circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
