@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/novels2.0/static/media/logo.d26e642a.png"
   },
   {
-    "revision": "8b1655fc5ef38c1e25f6",
-    "url": "/novels2.0/static/css/main.4854cbd3.chunk.css"
+    "revision": "b56d165f22c189af9a00",
+    "url": "/novels2.0/static/css/main.5dc37f1f.chunk.css"
   },
   {
-    "revision": "cafae86acb9f2d979810",
-    "url": "/novels2.0/static/js/1.cafae86a.chunk.js"
+    "revision": "889bd055031cfbc8ae7b",
+    "url": "/novels2.0/static/js/1.889bd055.chunk.js"
   },
   {
     "revision": "c77cb7f3a9400c53fade",
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/novels2.0/static/media/pipes.93b93aea.png"
   },
   {
-    "revision": "8b1655fc5ef38c1e25f6",
-    "url": "/novels2.0/static/js/main.8b1655fc.chunk.js"
+    "revision": "b56d165f22c189af9a00",
+    "url": "/novels2.0/static/js/main.b56d165f.chunk.js"
   },
   {
     "revision": "ced611daf7709cc778da928fec876475",
@@ -32,15 +32,15 @@ self.__precacheManifest = [
     "url": "/novels2.0/static/media/slick.b7c9e1e4.woff"
   },
   {
+    "revision": "526d7fdf63614222d376257221e8b754",
+    "url": "/novels2.0/static/media/slick.526d7fdf.svg"
+  },
+  {
     "revision": "d41f55a78e6f49a5512878df1737e58a",
     "url": "/novels2.0/static/media/slick.d41f55a7.ttf"
   },
   {
-    "revision": "f97e3bbf73254b0112091d0192f17aec",
-    "url": "/novels2.0/static/media/slick.f97e3bbf.svg"
-  },
-  {
-    "revision": "79234cb025f19e7029b9862e8487ed2b",
+    "revision": "e9ee18b80e18c33774c22a19971bc276",
     "url": "/novels2.0/index.html"
   }
 ];
