@@ -1,14 +1,22 @@
 import React from 'react';
 
-//this gets updates once setState is triggered in app.js
-const Button = ({ classname, text, onclick }) => {
-    console.log(text);
-    
-    if (onclick) {
-        return (<button className={classname} onClick={onclick}>{text}</button>)
-    } else {
-        return (<button className={classname}>{text}</button>)
+class Button extends React.Component {
+    constructor(props) {
+        super(props);
+        this.determineOnclick = this.determineOnclick.bind(this);
     }
+
+    determineOnclick(input) {
+        if (input === "close") {return (e) => this.props.toggle(e)}
+        if (input === null) {return null}
+        if (typeof (input) === "object") {return (e) => this.props.toggle(e, input)}
+    }
+
+    render() {
+            return (
+                <button className={this.props.classname} onClick={this.determineOnclick(this.props.onclick)}>{this.props.text}</button>
+            );
+        } 
 }
 
 export default Button;

@@ -13,7 +13,8 @@ const Modal = ({ showModal, modalContent, toggleModal }) => {
                 <Button
                     classname={"modal__inner__button modal__inner__button--close red"}
                     text={"Close"}
-                    onclick={(e) => toggleModal(e)}
+                    onclick={"close"}
+                    toggle={toggleModal}
                 />
                 {
                     modalContent.name ? (
@@ -40,8 +41,9 @@ const Modal = ({ showModal, modalContent, toggleModal }) => {
                     modalContent.url ? (
                         <a href={modalContent.url} target="_blank" rel="noopener noreferrer" style={{textDecoration:"none"}}>
                             <Button
-                                classname={"modal__inner__button modal__inner__button--external"}
+                                classname={"modal__inner__button modal__inner__button--external purple"}
                                 text={"Further Info"}
+                                onclick={null}
                             />
                         </a>
                     ) : null

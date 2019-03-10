@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { elastic as Menu } from 'react-burger-menu'
-import NewNovelCarousel from './components/carousel-new-novels';
-import Modal from './components/shared/modal';
+import NewNovelCarousel from './carousel-new-novels';
+import Modal from './shared/modal';
 
 
 class App extends Component {
@@ -21,8 +21,9 @@ class App extends Component {
 
   //the menu is hiden before you scroll a fixed amount, just to make a clean appareance with the picture
   showMenu = function () {
+    document.querySelector('#top > div:nth-child(1) > div.bm-menu-wrap > div:nth-child(3) > div > button').innerHTML = "";
     let button = document.getElementsByClassName("bm-burger-button")[0];
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 140) {
       button.className = "bm-burger-button show";
     } else {
       button.className = "bm-burger-button hide";

@@ -1,29 +1,47 @@
 button {
     color: #fff !important;
     border: none;
-    background-color: #9e18dd;
     position: relative;
     overflow: hidden;
     padding: 2.2% 5%;
+    font-size: 120% !important;
+    cursor: pointer;
+    outline: none;
+    background-position: center;
+    transition: background 0.4s;
+}
+
+.purple {
+    background-color: $purple;
 }
 
 .red {
-    background-color: #e74040;
+    background-color: $purple;
 }
 
-button .circle {
-    position: absolute;
-    border-radius: 50%;
-    background-color: #fff;
-    width: 100px;
-    height: 100px;
-    transform: translate(-50%, -50%) scale(0);
-    animation: scale 0.5s ease-out;
+//ripple effect, twice fo the same, for different colors
+
+.purple:hover {
+  background: lighten( $purple, 10% ) radial-gradient(circle, transparent 1%, $purple 1%) center/15000%;
 }
 
-@keyframes scale {
-    to {
-        transform: translate(-50%, -50%) scale(3);
-        opacity: 0;
-    }
+.purple:active {
+  background-color: lighten( $purple, 15% );
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.red:hover {
+  background: lighten( $button-red, 10% ) radial-gradient(circle, transparent 1%, $button-red 1%) center/15000%;
+}
+
+.red:active {
+  background-color: lighten( $button-red, 15% );
+  background-size: 100%;
+  transition: background 0s;
+}
+
+//pc version
+@include breakMin(600) {
+  
 }

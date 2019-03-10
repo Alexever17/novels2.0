@@ -16,7 +16,7 @@
         box-sizing: border-box;
         width: 100%;
         height: 100%;
-        background: rgba(0,0,0, 0.3);
+        background: $shadow-modal;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -24,11 +24,11 @@
     }
 //the inner area with the infos
     &__inner {
-        margin: 6% 0;
+        margin: 4% 0;
         z-index: 2000;
         box-sizing: border-box;
-        width: 86%;
-        padding: 6%;
+        width: 90%;
+        padding: 4%;
         background: #fff;
         z-index: 20;
         text-align: center;
@@ -38,7 +38,7 @@
             cursor: pointer;
 
             &--close {
-                margin-left: 70%;
+                margin-left: 78%;
                 z-index: 1000;
             }
 
@@ -68,7 +68,6 @@
 
         &__ranking {
             font-size: 140%;
-            color: #333;
             margin-bottom: 7%;
         }
 
@@ -78,13 +77,11 @@
                 font-weight: 800;
                 font-size: 150%;
                 margin-bottom: 2%;
-                color: #333;
             }
 
             p {
                 margin: 0;
                 font-size: 120%;
-                color: #666;
                 line-height: 1.3;
             }
         }

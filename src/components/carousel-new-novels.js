@@ -44,9 +44,10 @@ export default class NewNovelCarousel extends React.Component {
                 on the other side the book sets the state in the modal. 
                 */}
                 <Button
-                  classname={"carouselModuleButton"}
+                  classname={"carouselModuleButton purple"}
                   text={"Info"}
-                  onclick={(e) => this.props.toggleModal(e, book)}
+                  onclick={book}
+                  toggle={this.props.toggleModal}
                 />
               </div>
               

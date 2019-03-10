@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Helmet } from "react-helmet";
 import axios from "axios";
-import App from './App';
+import App from './components/App';
 import './scss/App.scss';
 
 class Base extends React.Component {
